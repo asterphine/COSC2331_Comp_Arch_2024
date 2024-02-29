@@ -61,20 +61,20 @@ print_candle:
 
 		jmp ecx
 
-print_cake:
+print_cake:						; sub program
 		mov eax, cake
 
 		mov ebx, ecx
 
 		mov ecx, 3
-print_cake_row:
+print_cake_row:					; loop within sub program 
 		call print_string
 		call print_nl
 		
 		loop print_cake_row
 
 		mov ecx, ebx
-		jmp ecx
+		jmp ecx					; jumps to post_cake
 	
 print_plate:
 		mov eax, plate

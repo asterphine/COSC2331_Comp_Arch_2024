@@ -35,6 +35,8 @@ input_loop:
         
         loop input_loop
 
+        ; push dword "!"        ; causes segfault
+
         call print_nl
         mov ecx, [string_length]
 remove_loop:
